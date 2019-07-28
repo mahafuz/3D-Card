@@ -1,0 +1,78 @@
+body {
+    background-color: #2980b9;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1170px;
+    margin: 5% auto 0 auto;
+    perspective: 30em;
+}
+
+.single-card {
+    flex-basis: 33.33%;
+    display: block;
+}
+
+.card-inner {
+    margin: 0 15px;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    height: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: -4px 18px 51px -19px rgb(47, 96, 148);
+}
+
+h1 {
+    color: #fff;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+p {
+    color: #fff;
+}
+
+p > a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+p img {
+    max-width: 60px;
+    position: relative;
+    top: 5px;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+.find-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.find-me img {
+    max-width: 60px;
+    margin: 0 0 0 6px;
+}
+
+.find-me span {
+    color: #fff;
+    font-weight: 600;
+}

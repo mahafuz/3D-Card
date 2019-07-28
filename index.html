@@ -7,88 +7,46 @@
     <title>3D Card</title>
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            background-color: #2980b9;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 16px;
-        }
-
-        .cards-wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            max-width: 1170px;
-            margin: 15% auto 0 auto;
-            perspective: 30em;
-        }
-
-        .single-card {
-            flex-basis: 33.33%;
-            display: block;
-        }
-
-        .card-inner {
-            margin: 0 15px;
-            background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
-            height: 300px;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: -4px 18px 51px -19px rgba(214,185,0,1);
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     
+
+
     <div class="cards-wrapper">
 
+        <header>
+            <h1>Card Hover 3D Animation With JQuery, CSS3, Transforms & Transitions</h1>
+            <p>This is an example of card 3d animation while hovering on each card, using jQuery, CSS3 transitions and transform rules. This code requires jQuery and it will work on modern browsers where CSS3 animations are supported. For understanding how this animation is working Please check the sourcecode.</p>
+
+            <p>Credits JS Code: <a href="https://codepen.io/henryz00/">Henry Zhang</a>, Icons Credits: <a href="https://icons8.com/icons">Icons8</a>, Color & Gradient Credits: <a href="https://webgradients.com/"><img src="https://webgradients.com/img/other/logos/itmeo_logo.png" alt="" srcset=""></a> </p>
+        </header>
+
         <div class="single-card">
-            <div class="card-inner">Hello</div>
+            <div class="card-inner"></div>
         </div><!-- ./single-card -->
 
         <div class="single-card" id="card">
-            <div class="card-inner">Hello</div>
+            <div class="card-inner"></div>
         </div><!-- ./single-card -->
 
         <div class="single-card">
-            <div class="card-inner">Hello</div>
+            <div class="card-inner"></div>
         </div><!-- ./single-card -->
+
+        <footer>
+            <div class="find-me">
+                <span>Find me on: </span>
+                <a target="_blank" href="https://www.linkedin.com/in/mahafuzur-rahaman-123852109/" class="linkedin"><img src="images/linkedin.svg" alt=""></a>
+                <a target="_blank" href="https://github.com/mr-mahfuz/" class="github"><img src="images/github.svg" alt=""></a>
+            </div>
+        </footer>
 
     </div><!-- ./cards-wrapper -->
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        (function($) {
-        
-            var card = $('.single-card');
-
-            card.map(function(index, item) {
-                
-                $(item).on("mousemove", function(e) {
-                    var mX = e.clientX
-                    var mY = e.clientY
-                    var winHalfWidth = window.innerWidth/2
-                    var winHalfHeight = window.innerHeight/2 
-                    var xdeg = (mX - winHalfWidth)/winHalfWidth;
-                    var ydeg = (mY - winHalfHeight)/winHalfHeight;
-                    $(item).css('transform', `rotateX(${ydeg * 10}deg) rotateY(${xdeg * 10}deg)`);
-                });
-
-                window.ondevicemotion = function(event) {
-                    var acX = event.accelerationIncludingGravity.x;
-                    var acY = event.accelerationIncludingGravity.y;
-                    var acZ = event.accelerationIncludingGravity.z;
-                    let xdeg = acX/10;
-                    let ydeg = acY/10;
-                    $(item).css('transform', `rotateX(${ydeg * 20}deg) rotateY(${xdeg * 20}deg)`);
-                }
-
-            });
-            
-        })(jQuery);
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>
