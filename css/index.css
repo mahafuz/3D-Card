@@ -76,3 +76,12 @@ footer {
     color: #fff;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 767px) {
+    .single-card {
+        height: 180px;
+        flex-basis: 100%;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+  }
